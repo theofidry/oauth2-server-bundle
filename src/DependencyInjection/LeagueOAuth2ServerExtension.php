@@ -256,11 +256,6 @@ final class LeagueOAuth2ServerExtension extends Extension implements PrependExte
         }
     }
 
-    private function isDoctrinePersistenceEnabled(array $config): bool
-    {
-        return 'doctrine' === $this->getPersistenceMethod($config);
-    }
-
     private function getPersistenceMethod(array $config): ?string
     {
         $persistenceMethod = key($config['persistence']);
